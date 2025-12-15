@@ -1,0 +1,8 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+  <qresource prefix="/">
+    <file>media/images/icons/luna-lone-icon.png</file>
+    <file>media/images/luna-avatar.jpg</file>
+    <file>media/images/icons/tag-icon.png</file>
+  </qresource>
+</RCC>
