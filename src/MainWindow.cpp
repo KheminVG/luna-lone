@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    setWindowIcon(QIcon(":/media/images/icons/luna-lone-icon.png"));
+    setWindowIcon(QIcon(":/assets/images/icons/luna-lone-icon.png"));
     m_audio_player = new AudioPlayer(this);
     m_text_animator = new TextAnimator(ui->avatarText, this);
 
