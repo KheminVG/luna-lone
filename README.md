@@ -4,7 +4,7 @@
 
 # Luna Lone
 
-A local desktop application for organizing and playing audio usings tags and short prompts.
+A local desktop application for organizing and playing audio using tags and short prompts.
 
 <p align="center">
   <img src="assets/screenshots/mainwindow.png" alt="Main Window Screenshot" width="600"/>
@@ -53,7 +53,7 @@ Planned improvements:
 - Custom avatar selection
 - Add support for short videos (gifs)
 - Add voice lines for UI character
-- Improve UI character's response
+- Improve UI character's responses
 
 ## License
 
