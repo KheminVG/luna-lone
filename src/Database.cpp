@@ -264,7 +264,7 @@ std::vector<std::pair<AudioEntry, int>> Database::getWeightedAudioMatches(const 
             if (i + 1 < tagIds.size()) sql += ",";
         }
 
-        sql += ") GROUP BY a.id ORDER BY score DESC;";
+        sql += ") GROUP BY a.id, a.display_name, a.file_path ORDER BY score DESC;";
 
         sqlite3_stmt *stmt = nullptr;
 

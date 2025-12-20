@@ -303,7 +303,7 @@ void MainWindow::processPrompt(const std::string &prompt)
     std::string lowerTag = tag.tagName;
     std::transform(lowerTag.begin(), lowerTag.end(), lowerTag.begin(), [](unsigned char c){return std::tolower(c);});
 
-    if (std::find(words.begin(), words.end(), lowerTag) != words.begin())
+    if (std::find(words.begin(), words.end(), lowerTag) != words.end())
     {
         matchedTagIds.push_back(tag.id);
     }
