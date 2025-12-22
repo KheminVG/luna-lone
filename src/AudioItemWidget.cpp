@@ -9,7 +9,7 @@ AudioItemWidget::AudioItemWidget(int id, const QString &name, const std::vector<
     
     ui->nameLabel->setText(audioName);
 
-    for (auto &tag : tags) {
+    for (const auto &tag : tags) {
         TagChip* tagChip = new TagChip(tag.id, QString::fromStdString(tag.tagName), this, false);
         ui->tagsContainer->addWidget(tagChip);
     }

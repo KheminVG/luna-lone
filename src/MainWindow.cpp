@@ -3,6 +3,7 @@
 #include "AudioItemWidget.h"
 #include "TagItemWidget.h"
 #include "TagAssignmentDialog.h"
+#include "Theme.h"
 #include <QDir>
 #include <QStandardPaths>
 #include <QFileDialog>
@@ -21,7 +22,8 @@ MainWindow::MainWindow(QWidget* parent)
     m_audio_player = new AudioPlayer(this);
     m_text_animator = new TextAnimator(ui->avatarText, this);
 
-    ui->playbackProgress->setStyleSheet("QProgressBar::chunk {background: rgba(191, 148, 255, 1);}");
+    auto& a = Theme::accents();
+    ui->playbackProgress->setStyleSheet(QString("QProgressBar::chunk {background: %1;}").arg(a.primary.name()));
 
     connect(ui->addAudioButton, &QPushButton::clicked, this, &MainWindow::onAddAudioClicked);
     connect(ui->selectFileButton, &QPushButton::clicked, this, &MainWindow::onSelectFileClicked);

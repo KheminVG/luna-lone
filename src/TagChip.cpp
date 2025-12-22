@@ -1,10 +1,14 @@
 #include "ui_TagChip.h"
 #include "TagChip.h"
+#include "Theme.h"
 
 TagChip::TagChip(int id, const QString &name, QWidget* parent, bool toggleable)
     : QWidget(parent), tagId(id), tagName(name), ui(new Ui::TagChip)
 {
     ui->setupUi(this);
+
+    auto& a = Theme::accents();
+    ui->tagButton->setStyleSheet(QString("color: %1;background-color: %2;border-radius: 10px;").arg(a.text.name(), a.primary.name()));
     
     ui->tagButton->setText(tagName);
     this->setFixedWidth(tagName.size() * 8 + 24);
@@ -46,10 +50,12 @@ void TagChip::setSelected(bool value)
 
 void TagChip::updateStyle()
 {
+    auto& a = Theme::accents();
+    
     if (selected) {
-        ui->tagButton->setStyleSheet("background-color: rgba(102, 53, 153, 1); border-radius: 10px;");
+        ui->tagButton->setStyleSheet(QString("color: %1;background-color: %2;border-radius: 10px;").arg(a.text.name(), a.primary.name()));
     } else {
-        ui->tagButton->setStyleSheet("background-color: rgba(70, 70, 70, 1); border-radius: 10px;");
+        ui->tagButton->setStyleSheet(QString("color: %1;background-color: %2;border-radius: 10px;").arg(a.text.name(), a.neutral.name()));
     }
 }
 

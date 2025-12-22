@@ -58,6 +58,7 @@ set(SOURCES
     src/TagAssignmentDialog.cpp
     src/AudioPlayer.cpp
     src/TextAnimator.cpp
+    src/Theme.cpp
     ui/MainWindow.ui
     ui/AudioItemWidget.ui
     ui/TagItemWidget.ui

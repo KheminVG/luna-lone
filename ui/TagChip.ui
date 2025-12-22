@@ -79,8 +79,7 @@
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(102, 51, 153);
-border-radius: 10px;</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>Tag Name</string>
