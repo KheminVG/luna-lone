@@ -1,8 +1,4 @@
-<p align="left">
-  <img src="assets/images/icons/luna-lone-logo-white.png" alt="Luna Lone Logo" width="120"/>
-</p>
-
-# Luna Lone
+# Luna Lone 🌙
 
 A local desktop application for organizing and playing audio using tags and short prompts.
 
