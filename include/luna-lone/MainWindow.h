@@ -18,6 +18,9 @@ public:
     explicit MainWindow(QWidget* parent = nullptr);
     ~MainWindow();
 
+protected:
+    void changeEvent(QEvent* event) override;
+
 private:
     Ui::MainWindow* ui;
     AudioPlayer* m_audio_player;
@@ -25,6 +28,8 @@ private:
 
     std::shared_ptr<Database> database;
     QString selectedFilePath;
+
+    void refreshIcons();
 
 private slots:
     void onSelectFileClicked();

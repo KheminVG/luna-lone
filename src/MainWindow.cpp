@@ -19,11 +19,14 @@ MainWindow::MainWindow(QWidget* parent)
 {
     ui->setupUi(this);
     setWindowIcon(QIcon(":/assets/images/icons/luna-lone-icon.png"));
+    QIcon::setThemeName("dark");
     m_audio_player = new AudioPlayer(this);
     m_text_animator = new TextAnimator(ui->avatarText, this);
 
     auto& a = Theme::accents();
     ui->playbackProgress->setStyleSheet(QString("QProgressBar::chunk {background: %1;}").arg(a.primary.name()));
+
+    ui->tagPageButton->setIcon(QIcon::fromTheme("tag"));
 
     connect(ui->addAudioButton, &QPushButton::clicked, this, &MainWindow::onAddAudioClicked);
     connect(ui->selectFileButton, &QPushButton::clicked, this, &MainWindow::onSelectFileClicked);
@@ -330,4 +333,26 @@ void MainWindow::processPrompt(const std::string &prompt)
    QString audioPath = QString::fromStdString(best_choice.second.filePath);
    m_audio_player->select(audioPath);
    m_audio_player->play();
+}
+
+void MainWindow::changeEvent(QEvent* event)
+{
+    if (event->type() == QEvent::PaletteChange) {
+        refreshIcons();
+    }
+
+    QMainWindow::changeEvent(event);
+}
+
+void MainWindow::refreshIcons()
+{
+    bool isDark = palette().color(QPalette::Window).lightness() < 128;
+
+    if (isDark) {
+        QIcon::setThemeName("dark");
+    } else {
+        QIcon::setThemeName("light");
+    }
+
+    update();
 }

@@ -120,10 +120,6 @@
         <property name="text">
          <string/>
         </property>
-        <property name="icon">
-         <iconset resource="../resources.qrc">
-          <normaloff>:/assets/images/icons/tag-icon.png</normaloff>:/assets/images/icons/tag-icon.png</iconset>
-        </property>
        </widget>
       </item>
      </layout>

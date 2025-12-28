@@ -2,7 +2,10 @@
 <RCC version="1.0">
   <qresource prefix="/">
     <file>assets/images/luna-avatar.jpg</file>
-    <file>assets/images/icons/tag-icon.png</file>
-    <file>assets/images/icons/luna-lone-icon.png</file>
+    <file>assets/images/misc/luna-lone-icon.png</file>
+    <file>icons/dark/index.theme</file>
+    <file>icons/light/index.theme</file>
+    <file>icons/dark/png/tag.png</file>
+    <file>icons/light/png/tag.png</file>
   </qresource>
 </RCC>
