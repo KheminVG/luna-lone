@@ -43,7 +43,6 @@ All data is stored locally.
 Luna Lone is an early-stage project
 
 Planned improvements:
-- Optimize UI colors for both dark theme and light theme
 - Add UI volume control
 - Improve prompt-to-tag matching
 - Custom avatar selection
